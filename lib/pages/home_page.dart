@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:nagad_clone_flutter/pages/profile_body.dart';
+import 'package:nagad_clone_flutter/pages/transaction_body.dart';
+
+import 'contacts_body.dart';
+import 'home_body.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
+  final String title;
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -14,7 +20,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Color inactiveColor = Colors.grey;
 
   static const List<Widget> _bottomMenu = [
-
+    HomeBody(),
+    TransactionBody(),
+    ContactsBody(),
+    ProfileBody()
   ];
 
   @override
